@@ -5,7 +5,7 @@ const CountriesList = (props) => {
   return (
     <ul>
       {props.countries.map((country) => (
-        <li>
+        <li key={country.cca3}>
           <Link to={`/country/${country.cca3}`}>{country.name.common}</Link>
         </li>
       ))}
